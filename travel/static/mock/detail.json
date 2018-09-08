@@ -1,0 +1,175 @@
+{
+  "ret": true,
+  "data": {
+    "sightName": "大连圣亚海洋世界(AAAA景区)",
+    "bannerImg": "http://img1.qunarzz.com/sight/p0/201404/23/04b92c99462687fa1ba45c1b5ba4ad77.jpg_600x330_bf9c4904.jpg",
+    "gallaryImgs": [
+      "http://img1.qunarzz.com/sight/p0/201404/23/04b92c99462687fa1ba45c1b5ba4ad77.jpg_600x330_bf9c4904.jpg",
+      "http://img1.qunarzz.com/sight/p0/1609/7a/7ae8ee7831836095a3.water.jpg_600x330_5d562f69.jpg",
+      "http://img1.qunarzz.com/sight/p0/1609/7a/7ae8ee7831836095a3.water.jpg_600x330_5d562f69.jpg",
+      "http://img1.qunarzz.com/sight/p0/1609/d3/d3d5e1066193621ca3.water.jpg_r_800x800_634d475c.jpg",
+      "http://img1.qunarzz.com/sight/p0/1607/21/212f9125ce6c5e7f5a.img.jpg_r_800x800_a9c922ca.jpg",
+      "http://img1.qunarzz.com/sight/p0/1507/5d/87b21344892ce3493920b8eb46794337.water.jpg_r_800x800_d60d1d3b.jpg",
+      "http://img1.qunarzz.com/sight/p0/1606/80/80c3891dad879732b4.water.jpg_r_800x800_28cafa52.jpg",
+      "http://img1.qunarzz.com/sight/p0/1606/82/822916df9159942cb4.water.jpg_r_800x800_8c86e29b.jpg",
+      "http://img1.qunarzz.com/sight/p0/1507/41/5e81a45652e3d8bcac01a5e9e37bef7b.water.jpg_r_800x800_8b43e5e0.jpg",
+      "http://img1.qunarzz.com/sight/p0/1606/43/43ebc66fb9f8df3cb4.water.jpg_r_800x800_f90d5c98.jpg",
+      "http://img1.qunarzz.com/sight/p57/201211/05/781c02f4e80fbebf93835fbb.jpg_r_800x800_9050b86b.jpg"],
+    "categoryList": [{
+        "title": "成人票",
+        "children": [{
+          "title": "成人三馆联票",
+          "children": [{
+            "title": "成人三馆联票 - 某一连锁店销售"
+          }]
+        },{
+          "title": "成人五馆联票"
+        }]
+      }, {
+        "title": "学生票"
+      }, {
+        "title": "儿童票"
+      }, {
+        "title": "特惠票"
+      }],
+    "cityAreaList" : [{
+        "id": "0001",
+        "imgUrl": "http://img1.qunarzz.com/sight/p0/1708/2b/2b3b94de99c0a425a3.img.jpg_640x276_880d464b.jpg",
+        "title": "八达岭长城",
+        "desc": "史称天下九塞之一，是万里长城的精华",
+        "price":"40"
+      }, {
+        "id": "0002",
+        "imgUrl": "http://img1.qunarzz.com/sight/p0/1501/f4/f467729126949c3a.water.jpg_640x276_267de9bb.jpg",
+        "title": "天安门广场",
+        "desc": "世界上最大的城市中心广场，北京的心脏",
+        "price":"20"
+      }, {
+        "id": "0003",
+        "imgUrl": "http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_640x276_a9486045.jpg",
+        "title": "故宫",
+        "desc": "红墙瓦砾，有种岁月沧桑感，一朝天子一风云",
+        "price":"29.9"
+      }, {
+        "id": "0004",
+        "imgUrl": "http://img1.qunarzz.com/sight/p0/1505/d2/d274c92de14c93da.water.jpg_640x276_ab6b8603.jpg",
+        "title": "颐和园",
+        "desc": "历史雕琢的角落，在灿烂的阳光下兀自美好着",
+        "price":"38.4"
+      }, {
+        "id": "0005",
+        "imgUrl": "http://img1.qunarzz.com/sight/p0/1505/f5/f5f45e1a83537bcb.water.jpg_640x276_91cd6a4f.jpg",
+        "title": "圆明园",
+        "desc": "追忆昔日万园之园",
+        "price":"39"
+      }, {
+        "id": "0006",
+        "imgUrl": "http://img1.qunarzz.com/sight/p0/1507/36/ce3d2d6c9ab44d67ae68d940b8781829.water.jpg_640x276_84381762.jpg",
+        "title": "北京野生动物园",
+        "desc":"北京郊区的一座大型自然生态动物园",
+        "price":"49.9"
+      }, {
+        "id": "0007",
+        "imgUrl": "http://img1.qunarzz.com/sight/p0/201405/12/51b63883c25f5d87af3c08bb016e2bd7.jpg_640x276_f784a0e8.jpg",
+        "title": "恭王府",
+        "desc":"一起去看看和珅家",
+        "price":"9.9"
+      }, {
+        "id": "0008",
+        "imgUrl": "http://img1.qunarzz.com/sight/p0/1508/a5/4003f9dd7bebf61eccbf64046e26d487.water.jpg_640x276_4dafec1a.jpg",
+        "title": "北京欢乐谷",
+        "desc":"七大主题园区带你畅享北京欢乐谷",
+        "price":"120"
+      }, {
+        "id": "0009",
+        "imgUrl": "http://img1.qunarzz.com/sight/p0/1708/2b/2b6378fd3b2e1d86a3.img.jpg_640x276_dd580850.jpg",
+        "title": "慕田峪长城",
+        "desc":"秀美长城，关键是人少",
+        "price":"19.9"
+      }, {
+        "id": "0010",
+        "imgUrl": "http://img1.qunarzz.com/sight/p0/1804/c8/c88bb5e69c9a9c5ea3.img.jpg_640x276_3b63e64b.jpg",
+        "title": "古北水镇",
+        "desc":"走进那个画中的小镇",
+        "price":"28.8"
+      }],
+    "list" : [{
+        "id": "0001",
+        "imgUrl": "https://imgs.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_110x110_fac6a6cd.jpg",
+        "title": "故宫(5A)",
+        "area": "东城区",
+        "price":"40",
+        "moring":"【当日票】故宫成人票",
+        "afternoon":"【预售上午场】故宫成人票",
+        "normal":"48",
+        "sales":"40",
+        "number":"68478"
+      }, {
+        "id": "0002",
+        "imgUrl": "https://imgs.qunarzz.com/sight/p0/1505/d2/d274c92de14c93da.water.jpg_110x110_d9d85877.jpg",
+        "title": "颐和园(5A)",
+        "area": "海淀区",
+        "price":"20",
+        "moring":"颐和园门票+导游讲解服务成人票（09:00场）",
+        "afternoon":"颐和园门票+导游讲解服务成人票（10:00场）",
+        "normal":"40",
+        "sales":"40",
+        "number":"53478"
+      }, {
+        "id": "0003",
+        "imgUrl": "https://imgs.qunarzz.com/sight/p0/1708/2b/2b3b94de99c0a425a3.img.jpg_110x110_684eb80e.jpg",
+        "title": "八达岭长城(5A)",
+        "area": "延庆县",
+        "price":"29.9",
+        "moring":"八达岭长城成人票",
+        "afternoon":"八达岭长城门票+索道/地面缆车（往返）成人票",
+        "normal":"120",
+        "sales":"68",
+        "number":"63540"
+      }, {
+        "id": "0004",
+        "imgUrl": "https://imgs.qunarzz.com/sight/p0/1508/a5/4003f9dd7bebf61eccbf64046e26d487.water.jpg_110x110_e23a9143.jpg",
+        "title": "北京欢乐谷(4A)",
+        "area": "朝阳区",
+        "price":"58.8",
+        "moring":"【情人节特惠】北京欢乐谷夜场成人票",
+        "afternoon":"【活动票】北京欢乐谷日场成人票",
+        "normal":"98",
+        "sales":"68",
+        "number":"57342"
+      }, {
+        "id": "0005",
+        "imgUrl": "https://imgs.qunarzz.com/sight/p0/1505/f5/f5f45e1a83537bcb.water.jpg_110x110_4c72dbfd.jpg",
+        "title": "圆明园(4A)",
+        "desc": "海淀区",
+        "price":"9.8",
+        "moring":"北京圆明园成人票",
+        "afternoon":"圆明园大水法遗址门票（不含景区大门票）",
+        "normal":"29.9",
+        "sales":"9.8",
+        "number":"49630"
+      }, {
+        "id": "0006",
+        "imgUrl": "https://imgs.qunarzz.com/sight/p0/201405/12/51b63883c25f5d87af3c08bb016e2bd7.jpg_110x110_d957be56.jpg",
+        "title": "恭王府(5A)",
+        "desc":"西城区",
+        "price":"19.9",
+        "moring":"恭王府半价票（儿童/老人）",
+        "afternoon":"恭王府成人票",
+        "normal":"40",
+        "sales":"19.9",
+        "number":"22853"
+      }, {
+        "id": "0007",
+        "imgUrl": "https://imgs.qunarzz.com/sight/p0/1507/36/ce3d2d6c9ab44d67ae68d940b8781829.water.jpg_110x110_52cd713d.jpg",
+        "title": "北京野生动物园(4A)",
+        "desc":"大兴区",
+        "price":"71",
+        "moring":"北京野生动物园学生票/老人票",
+        "afternoon":"北京野生动物园成人票",
+        "normal":"120",
+        "sales":"71",
+        "number":"13930"
+      }]
+  }
+}
