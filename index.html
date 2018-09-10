@@ -1,19 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
   <title>邬飞-个人博客</title>
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/main.css">
 </head>
-<style>
-  span{
-    font-size: 40px;
-    display:block;
-    text-align: center;
-    margin-top:50px;
-  }
-</style>
 <body>
-  <span>模仿京东金融---------<a href="./finance/index.html">传送门</a></span>
-  <span>模仿去哪儿网---------<a href="./travel/index.html">传送门</a></span>
+  <header>
+    <nav class=container>
+      <a href="#" class="logo">WU<span>U</span>FEI<span>I</span></a>
+    </nav>
+  </header>
+  <div>
+    <section class="banner">
+      <div class="container banner-content clearFix">
+        <div class="banner-left left">
+          <h1 class="banner-title">
+            <span>H</span>ow 
+            <span>T</span>o 
+            <span>M</span>ake 
+            <span>L</span>ove
+          </h1>
+          <P class="banner-text">生活多一个U,才多了一份i</P>
+        </div>
+        <div class="banner-right right">
+          <div class="banner-box">
+            <p id="showText" class="banner-detail"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container projects clearFix">
+      <div class="col-6 left">
+        <div class="item clearFix mar-right">
+          <div class="right">
+            <span class="remarks">Vue</span>
+            <span class="remarks">stylus</span>
+          </div>
+          <h2 class="title">一款旅游APP</h2>
+          <p class="detail">这是一款模仿去那儿写的旅游景点APP,所用的框架是Vue,样式采用stylus,同时用到了vue-router,vue-awesome-swiper,
+          也用到第三方插件vetter-scroll</p>
+          <a class="btn btn-border-right" href="https://github.com/wuufeii/Travel">Source</a><a class="btn" href="https://wuufeii.github.io/demo/travel/index.html">Demo</a>
+        </div>
+      </div>
+      <div class="col-6 left">
+        <div class="item clearFix mar-left">
+          <div class="right">
+            <span class="remarks">Vue</span>
+            <span class="remarks">SASS</span>
+          </div>
+          <h2 class="title">一款金融APP</h2>
+          <p class="detail">这是一款模仿京东金融APP,所用的框架是Vue,样式采用sass,本项目的优点就是直接使用px使用移动端的自适应。</p>
+          <a class="btn btn-border-right" href="https://github.com/wuufeii/JDFinance">Source</a><a class="btn" href="https://wuufeii.github.io/demo/finance/index.html">Demo</a>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script src="./assets/js/main.js"></script>
 </body>
 </html>
