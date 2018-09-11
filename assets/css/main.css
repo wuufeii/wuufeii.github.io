@@ -60,6 +60,21 @@
 .btn-border-right{
   border-right: .01rem solid #999; 
 }
+::-webkit-scrollbar {
+  width: .1rem;
+  height: .1rem;
+  background-color: #f5f5f5;
+}
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 .06rem rgba(0,0,0,.3);
+  border-radius: .05rem;
+  background-color: #f5f5f5;
+}
+::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 .06rem rgba(0,0,0,.3);
+  border-radius: .05rem;
+  background-color: #38a4ab;
+}
 
 /* 头部样式 */
 header {
@@ -219,6 +234,8 @@ header {
   padding: .6rem .7rem;
   margin-bottom: 30px;
   border: .02rem solid rgba(129, 129, 129, 0.1);
+  height: 6.6rem;
+  overflow-y: scroll;
 }
 .article-box:before,
 .article-box:after {
@@ -262,15 +279,9 @@ header {
 }
 .article-box>.detail {
   font-size: .32rem;
-  min-height: 3.6rem;
   line-height: .6rem;
   color: #666;
   text-indent: .64rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 6;
-  -webkit-box-orient: vertical;
 }
 
 /* 联系区样式 */
@@ -380,10 +391,20 @@ footer{
   .contact-item .iconfont {
     font-size: .48rem;
   }
+  .article-item{
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 @media screen and (max-width: 450px) {
   html{
-    font-size: 36px;
+    font-size: 40px;
+  }
+  .banner-title {
+    font-size: .64rem;
+  }
+  .banner-text {
+    font-size: .30rem;
   }
   .col-md-6{
     width: 50%;
@@ -391,7 +412,10 @@ footer{
   .contact-item {
     padding: .2rem 0;
   }
+  .article-box {
+    height: 5rem;
+  }
   footer {
-    padding: .4rem 0;
+    padding: .34rem 0;
   }
 }
