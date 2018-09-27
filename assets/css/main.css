@@ -75,6 +75,14 @@
   border-radius: .05rem;
   background-color: #38a4ab;
 }
+::selection{
+  background-color: #38a4ab;
+  color: #fff;
+}
+::-moz-selecttion{
+  background-color: #38a4ab;
+  color: #fff;
+}
 
 /* 头部样式 */
 header {
@@ -234,7 +242,7 @@ header {
   margin-bottom: 30px;
   border: .02rem solid rgba(129, 129, 129, 0.1);
   height: 6.6rem;
-  overflow-y: scroll;
+  overflow-y: hidden; 
 }
 .article-box:before,
 .article-box:after {
@@ -281,6 +289,30 @@ header {
   line-height: .6rem;
   color: #666;
   text-indent: .64rem;
+}
+.article-box>.more {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: .6rem;
+  line-height: .6rem;
+  text-align: center;
+  font-weight: bold;
+  background: -webkit-linear-gradient(rgba(192,192,192,.3) 30%, rgba(192,192,192,.6) 50%, rgba(192,192,192,1) 100%);
+  background: -o-linear-gradient(rgba(192,192,192,.3) 30%, rgba(192,192,192,.6) 50%, rgba(192,192,192,1) 100%);
+  background: linear-gradient(rgba(192,192,192,.3) 30%, rgba(192,192,192,.6) 50%, rgba(192,192,192,1) 100%);
+}
+.more-item{
+  padding: .08rem .36rem;
+  background-color: #38a4ab;
+  color: #fff;
+  border-radius: .06rem;
+  cursor: pointer;
+}
+.more-item>i{
+  font-size: .32rem;
+  padding-right: .18rem;
 }
 
 /* 联系区样式 */

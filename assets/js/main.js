@@ -11,3 +11,19 @@ function textLoading () {
   },120)
 }
 textLoading();
+
+function showMore () {
+  var more = document.getElementsByClassName('more-item')
+  for(var i = 0; i < more.length; i++){
+    more[i].index = i;
+    more[i].onclick = function () {
+      var i = this.index;
+      var item = more[i].parentNode
+      var box = item.parentNode;
+      box.style.overflowY = 'scroll';
+      item.style.display = 'none';
+
+    }
+  }
+}
+showMore();
