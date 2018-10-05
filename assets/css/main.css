@@ -169,7 +169,6 @@ header {
   background-color: #38a4ab;
   padding: .04rem .12rem;
   border-radius: .06rem;
-  margin-left: .1rem;
 }
 .projects .title {
   margin-top: .1rem;
@@ -446,6 +445,7 @@ footer{
   }
   .article-box {
     height: 5rem;
+    padding: .6rem .4rem;
   }
   footer {
     padding: .34rem 0;
