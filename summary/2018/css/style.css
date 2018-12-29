@@ -35,11 +35,11 @@ p {
   z-index: -1;
 }
 .container>.title {
-  font-size: calc(22px + 2.2vw);
+  font-size: 28px;
 }
 
 .container>.text {
-  font-size: calc(12px + 2.2vw);
+  font-size: 18px;
 }
 
 @-webkit-keyframes hideinfo {
