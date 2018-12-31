@@ -70,11 +70,31 @@ function typeIt() {
 $(document).ready(function () {
      init();
      var music = document.getElementById("music");
-     music.play(); 
+     var musicImg = document.getElementById("musicImg");
+     if (music.paused) {
+          musicImg.src = "./img/pause.png"
+     } else {
+          musicImg.src = "./img/play.png"
+     }
+     // music.play(); 
 
      // 文字动画
      setTimeout(function(){
           $('#title').beatText({isAuth:true,beatHeight:"1em",isRotate:false,upTime:100,downTime:100});
      },2250)
 
+     $('#musicImg').click(function () {
+          if (music.paused) {
+               music.play();
+               $(this).attr('src','./img/play.png');
+          } else {
+               music.pause();
+               $(this).attr('src','./img/pause.png')
+          }
+     })
+
 });
+
+function clickMusic () {
+     
+}

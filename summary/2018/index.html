@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="zh-cmn-Hans" >
 
 <head>
 <meta charset="UTF-8">
@@ -9,7 +9,13 @@
 </head>
 
 <body>
-  <audio id="music" src="./resources/borrowMe.mp3" type="audio/mpeg" autoplay loop="loop"></audio>
+  <div class="music">
+    <audio id="music" autoplay="autoplay" preload="auto" loop>
+        <source src="./resources/borrowMe.mp3" type="audio/mpeg" />
+    </audio>
+    <span>谢春花-借我</span>
+    <img src="./img/play.png" id="musicImg">
+  </div>
   <canvas id="canvas"></canvas>
   <div class="container">
     <p class="title" id="title">再见，2018！你好，2019</p>

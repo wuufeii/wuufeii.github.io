@@ -55,7 +55,6 @@ p {
   position: relative;
   display: inline-block;
   background: transparent;
-
 }
 
 .rotate{
@@ -65,5 +64,32 @@ p {
   -webkit-transform:rotate(360deg);
   -o-transform:rotate(360deg);
   -webkit-transition-duration: 0.7s;
+}
+
+.music {
+  float: right;
+  height: 30px;
+  margin-right: 10px;
+  font-size: 14px;
+  color: #c2c2c2;
+  line-height: 30px;
+}
+
+.music>span {
+  vertical-align: top;
 
 }
+
+.music>img {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+/* .music:after {
+  display: block;
+  content: '';
+  clear: both;
+  visibility: hidden;
+  height: 0;
+} */
