@@ -67,8 +67,9 @@
 }
 
 .content_text {
-	padding: 2rem .4rem !important;}
+	padding: 2rem .4rem !important;
+}
 
 .content_text>p {
-	font-size: .32rem;
+	font-size: .28rem!important;
 }
