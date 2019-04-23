@@ -3,7 +3,7 @@ baseData([{
 	frontCover: {
 		logo: 'Wf',
 		title: '这是笔记本',
-		content: '青春纪念手册',
+		content: 'this is a notebook',
 		year: '2019'
 	},
 	content: [{
