@@ -13,7 +13,7 @@
 	width: 1.2rem !important;
 	height: 1.2rem !important;
 	line-height: 1.2rem !important;
-	font-size: .8rem !important;
+	font-size: .4rem !important;
 }
 
 .logo:before {
@@ -25,17 +25,17 @@
 
 .home_title {
 	margin: .2rem 0 !important;
-	font-size: .54rem !important;
+	font-size: .44rem !important;
 }
 
 .home_content {
-	font-size: .42rem !important;
+	font-size: .3rem !important;
 	padding: .1rem 0 !important;
 }
 
 .year {
 	margin-top: 1rem !important;
-	font-size: .9rem !important
+	font-size: .8rem !important
 }
 
 .photo {
@@ -58,12 +58,12 @@
 }
 
 .content_title>h3 {
-	font-size: .56rem !important;
+	font-size: .48rem !important;
 	margin: 0 0 .2rem!important;
 }
 
 .content_title>p {
-	font-size: .46rem !important;
+	font-size: .36rem !important;
 }
 
 .content_text {
@@ -71,5 +71,5 @@
 }
 
 .content_text>p {
-	font-size: .38rem!important;
+	font-size: .28rem!important;
 }
