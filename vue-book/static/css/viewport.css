@@ -73,11 +73,13 @@
 }
 
 .click_tips {
-	left: 240px;
-	top: 240px;
+	  left: 7.1rem !important;
+    top: 6.8rem !important;
 }
 
 .tips {
 	left: calc(50% + 1.4rem) !important;
-	top: -4.1rem !important;
+	top: -3rem !important;
+	width: 2rem !important;
+	height: 1rem !important;
 }
