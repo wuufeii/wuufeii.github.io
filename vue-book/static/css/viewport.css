@@ -40,8 +40,6 @@
 
 .photo {
 	position: absolute;
-	right: 10px;
-	bottom: 10px;
 	width: .8rem !important;
 	height: 1.6rem !important;
 }
@@ -72,4 +70,12 @@
 
 .content_text>p {
 	font-size: .28rem!important;
+}
+	.click_tips {
+		left: 240px;
+	top: 240px;
+	}
+		.tips {
+		left: calc(50% + 1.4rem) !important;
+			top: -4.1rem !important;
 }
