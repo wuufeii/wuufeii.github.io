@@ -24,7 +24,11 @@
             var newMarkup = '';
             for (var i = 0; i <= text.length; i++) {
                 var character = text.slice(i, i + 1);
-                newMarkup += ($.trim(character)) ? '<span class="beat-char">' + character + '</span>' : character
+                if(i>10) {
+									newMarkup += ($.trim(character)) ? '<a class="beat-char" href="https://wuufeii.github.io/summary/2019">' + character + '</a>' : character
+								} else {
+									newMarkup += ($.trim(character)) ? '<span class="beat-char">' + character + '</span>' : character
+								}
             }
             obj.html(newMarkup);
 			if(!options.isAuth){			
