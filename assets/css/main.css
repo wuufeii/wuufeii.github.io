@@ -586,7 +586,6 @@ footer p>a:last-child:after {
   font-size: .2rem;
   font-weight: bold;
   cursor: pointer;
-  z-index: 999;
 }
 .summary-all-item:before {
   content: '';
@@ -596,6 +595,7 @@ footer p>a:last-child:after {
   right: calc(50% - .02rem);
   top: -.4rem;
   bottom: 0;
+  z-index: -1;
 }
 .summary-all-item:after {
   content: '';
