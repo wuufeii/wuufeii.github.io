@@ -69,6 +69,7 @@
 }
 .btn-border-left{
   border-left: .01rem solid #ccc;
+    margin-left: -.01rem;
 }
 ::-webkit-scrollbar {
   width: .1rem;
