@@ -67,8 +67,8 @@
 .btn:hover {
   background-color: #057178;
 }
-.btn-border-right{
-  border-right: .01rem solid #999; 
+.btn-border-left{
+  border-left: .01rem solid #ccc;
 }
 ::-webkit-scrollbar {
   width: .1rem;
