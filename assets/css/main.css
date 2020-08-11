@@ -916,21 +916,21 @@ footer p > a:last-child:after {
   font-weight: bold;
   cursor: pointer;
 }
-.sign-item>.sing-xs {
+.sign-item>.sign-xs {
   font-size: .28rem;
-  opacity: .1;
+  opacity: .6;
 }
-.sign-item>.sing-sm {
+.sign-item>.sign-sm {
   font-size: .32rem;
-  opacity: .3;
-}
-.sign-item>.sing-md {
-  font-size: .36rem;
-  opacity: .5;
-}
-.sign-item>.sing-lg {
-  font-size: .40rem;
   opacity: .7;
+}
+.sign-item>.sign-md {
+  font-size: .36rem;
+  opacity: .8;
+}
+.sign-item>.sign-lg {
+  font-size: .40rem;
+  opacity: .9;
 }
 .sign-item>.sing-xl {
   font-size: .44rem;

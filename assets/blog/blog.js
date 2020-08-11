@@ -186,7 +186,7 @@ function getSignPage(dom) {
   let domStr = `<div class="diary-sign"><div class="title">标签 - ${allSign.length}</div><div class="sign-item">`
   allSign.forEach(item => {
     let m = item.num
-    let cls = m<2? 'sign-xs': m<3?'sing-sm':m<4?'sing-md':m<5?'sing-lg':'sing-xl'
+    let cls = m<2? 'sign-xs': m<3?'sign-sm':m<4?'sign-md':m<5?'sign-lg':'sign-xl'
     domStr+=`<a href="./blog.html?type=${item.sign}" class="${cls}">${item.sign}</a>`
   })
   domStr += '</div></div>'
