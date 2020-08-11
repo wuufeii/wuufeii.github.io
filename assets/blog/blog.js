@@ -95,19 +95,24 @@ function getLogDetail(item, content, dom) {
   })
   domStr += `</div><pre class="content showDiary">${content}</pre>`
   let currentBlog = [...allBlog]
-  setTimeout(() => {
-    domStr += '<div class="next-blog">'
-    let len = currentBlog.length
-    if (len > 1) {
-      domStr += `<span>上一篇：<a class="before-btn" href="./blog.html?detail=${currentBlog[len - 2].itemId}">${currentBlog[len - 2].title}</a></span>`
-    }
-    if (len < allBlog.length) {
-      domStr += `<span>下一篇：<a class="after-btn" href="./blog.html?detail=${allBlog[len].itemId}">${allBlog[len].title}</a></span>`
-    }
-    domStr += '</div></div>'
+    domStr+= '</div>'
     newDom.innerHTML = domStr
     dom.appendChild(newDom)
-  }, 1)
+    setTimeout(() => {
+      let innerDom = document.getElementsByClassName('diary-detail-item')[0]
+      let otherDom = document.createElement('div')
+      let nextDomStr= '<div class="next-blog">'
+      let len = currentBlog.length
+      if (len > 1) {
+        nextDomStr+= `<span>上一篇：<a class="before-btn" href="./blog.html?detail=${currentBlog[len - 2].itemId}">${currentBlog[len - 2].title}</a></span>`
+      }
+      if (len < allBlog.length) {
+        nextDomStr+= `<span>下一篇：<a class="after-btn" href="./blog.html?detail=${allBlog[len].itemId}">${allBlog[len].title}</a></span>`
+      }
+      domStr+= '</div>'
+      otherDom.innerHTML = nextDomStr
+      innerDom.appendChild(otherDom)
+    },1)
 }
 
 /*统计标签*/
