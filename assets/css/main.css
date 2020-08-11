@@ -892,7 +892,6 @@ footer p > a:last-child:after {
   position: absolute;
   content: '';
   width: .02rem;
-  height: 100%;
   left: -.01rem;
   top: 0;
   bottom: 0;
@@ -1224,6 +1223,15 @@ footer p > a:last-child:after {
   }
   .diary-sign>.title {
     font-size: .46rem;
+  }
+  .diary-list>.title:after {
+    width: .2rem;
+    height: .2rem;
+    left: -.2rem;
+  }
+  .diary-list>div:not(:last-child):before {
+    width: .04rem;
+    left: -.02rem;
   }
 }
 
