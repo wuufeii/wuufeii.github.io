@@ -9,6 +9,9 @@ let timer = null
 const blog2020 = function (data) {
   showDiary(data)
 }
+const blog2019 = function (data) {
+  showDiary(data)
+}
 const blog2018 = function (data) {
   showDiary(data)
 }
@@ -53,24 +56,28 @@ function showDiary(data) {
   if (isType) {
     /*===========同类标签页显示的内容============*/
     url = url.split('?type=')[1]
-    timer = setTimeout(() => {
-      getLogByTime(url, dom)
-      clearTimeout((timer))
-    }, 1)
+    setTimeout(() => {
+      if(timer!==1) {
+        getLogByTime(url, dom)
+      }
+      timer=1
+    }, 100)
   }
   if (isSign) {
     /*===========标签分类============*/
-    timer = setTimeout(() => {
-      getSignPage(dom)
-      clearTimeout((timer))
-    }, 1)
+    setTimeout(() => {
+      if(timer!==1) {
+        getSignPage(dom)
+      }
+      timer=1
+    }, 100)
   }
 }
 
 /*日志列表*/
 function getLogList(item, content) {
   let newDom = document.createElement('div')
-  let domStr = `<div class="diary-item"><div class="title">${item.title}</div><div class="sign"><span class="iconfont icon-riqi time">${item.time}</span>`
+  let domStr = `<div class="diary-item"><a class="title" href="./blog.html?detail=${item.itemId}">${item.title}</a><div class="sign"><span class="iconfont icon-riqi time">${item.time}</span>`
   item.sign.forEach(inner => {
     domStr += `<a href="./blog.html?type=${inner}" class="iconfont icon-biaoqian tag">${inner}</a>`
   })
@@ -181,13 +188,14 @@ function getLogByTime(url, dom) {
 
 /*标签页*/
 function getSignPage(dom) {
-  console.log(allSign)
+  console.log('jll??????')
   let newDom = document.createElement('div')
   let domStr = `<div class="diary-sign"><div class="title">标签 - ${allSign.length}</div><div class="sign-item">`
   allSign.forEach(item => {
     let m = item.num
     let cls = m<2? 'sign-xs': m<3?'sign-sm':m<4?'sign-md':m<5?'sign-lg':'sign-xl'
-    domStr+=`<a href="./blog.html?type=${item.sign}" class="${cls}">${item.sign}</a>`
+    m=m>100?'99+':m
+    domStr+=`<a href="./blog.html?type=${item.sign}" class="${cls}">${item.sign}<i class="sign-tag">${m}</i></a>`
   })
   domStr += '</div></div>'
   newDom.innerHTML = domStr

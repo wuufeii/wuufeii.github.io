@@ -761,6 +761,7 @@ footer p > a:last-child:after {
   padding: .8rem 0 .6rem;
 }
 .diary-item>.title {
+  display: block;
   color: #2e2e2e;
   font: .56rem Tahoma,Helvetica,Arial,"\5b8b\4f53",sans-serif;
   font-weight: 400;
@@ -912,9 +913,29 @@ footer p > a:last-child:after {
   margin-bottom: .4rem;
 }
 .sign-item>a {
-  margin-right: .4rem;
+  margin-right: .8rem;
   font-weight: bold;
   cursor: pointer;
+  position: relative;
+}
+.sign-tag {
+  position: absolute;
+  display: inline-block;
+  font-size: .2rem;
+  font-weight: normal;
+  width: .5rem;
+  height: .5rem;
+  text-align: center;
+  line-height: .5rem;
+  background: #ff7242;
+  color: #fff;
+  border-radius: 50%;
+  top: -.2rem;
+  transform: scale(.8);
+  -webkit-transform: scale(.8);
+  -moz-transform: scale(.8);
+  -ms-transform: scale(.8);
+  -o-transform: scale(.8);
 }
 .sign-item>.sign-xs {
   font-size: .28rem;
@@ -1164,6 +1185,13 @@ footer p > a:last-child:after {
   }
   .diary-list {
     margin-left: 0;
+  }
+  .sign-tag {
+    transform: scale(.7);
+    -webkit-transform: scale(.7);
+    -moz-transform: scale(.7);
+    -ms-transform: scale(.7);
+    -o-transform: scale(.7);
   }
 }
 
