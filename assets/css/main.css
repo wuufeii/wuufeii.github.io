@@ -1,24 +1,5 @@
 @charset "utf-8";
 
-/* 字体图标 */
-@font-face {
-  font-family: 'iconfont';  /* project id 798878 */
-  src: url('http://at.alicdn.com/t/font_798878_kgbk51pfsfb.eot');
-  src: url('http://at.alicdn.com/t/font_798878_kgbk51pfsfb.eot?#iefix') format('embedded-opentype'),
-  url('http://at.alicdn.com/t/font_798878_kgbk51pfsfb.woff2') format('woff2'),
-  url('http://at.alicdn.com/t/font_798878_kgbk51pfsfb.woff') format('woff'),
-  url('http://at.alicdn.com/t/font_798878_kgbk51pfsfb.ttf') format('truetype'),
-  url('http://at.alicdn.com/t/font_798878_kgbk51pfsfb.svg#iconfont') format('svg');
-}
-
-.iconfont {
-  font-family: "iconfont" !important;
-  font-size: 16px;
-  font-style: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 /* 整体布局 */
 .left {
   float: left;
@@ -750,10 +731,8 @@ footer p > a:last-child:after {
   height: 100%;
   padding: .1rem;
   margin-right: .1rem;
+  margin-bottom: .1rem;
   background-color: #c9dbdc;
-}
-.images .col-3:nth-child(4n) .img-item {
-  margin-right: 0;
 }
 .img-item>img {
   display: none;
