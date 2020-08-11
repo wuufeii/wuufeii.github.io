@@ -43,7 +43,7 @@ function showDiary(data) {
     }
     if (isHome) {
       /*首页显示的内容*/
-      if (indexNum < 10) {
+      if (indexNum < 5) {
         let newDom = getLogList(item, content)
         dom && dom.appendChild(newDom)
       }
