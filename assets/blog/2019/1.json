@@ -1,5 +1,12 @@
 blog2019(
-[{
+[
+ {
+    "time": "2019-02-22",
+    "title": "利用伪元素before和after实现步骤条",
+    "sign": ["CSS","HTML"],
+    "content": "      利用before和after实现步骤条"
+  },
+  {
     "time": "2019-02-16",
     "title": "var,let和const的区别",
     "sign": ["JavaScript","es6"],
