@@ -774,8 +774,9 @@ footer p > a:last-child:after {
 .diary-item>.sign {
   padding: .3rem 0;
 }
-.diary-item>.sign>span {
-  padding-right: .2rem;
+.diary-item>.sign>span,
+.diary-item>.sign>a {
+  margin-right: .2rem;
   color: #969696;
 }
 .diary-item>.sign>.iconfont:before {
