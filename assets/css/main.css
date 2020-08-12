@@ -826,8 +826,15 @@ footer p > a:last-child:after {
   border-bottom: none;
 }
 .diary-detail-item .content {
-  padding-bottom: .4rem;
   border-bottom: .04rem dashed #9ce8ec;
+  background-color: #f5f2f0;
+  padding: 0 .2rem .4rem;
+}
+.diary-detail-item .content code{
+  display: block;
+  line-height: 1.8;
+  background-color: #e6e6e6;
+  margin: .16rem 0;
 }
 .next-blog {
   display: flex;
@@ -911,12 +918,13 @@ footer p > a:last-child:after {
   justify-content: center;
   align-items: center;
   margin-bottom: .4rem;
+  flex-wrap: wrap;
 }
 .sign-item>a {
-  margin-right: .8rem;
   font-weight: bold;
   cursor: pointer;
   position: relative;
+  margin: .3rem .4rem;
 }
 .sign-tag {
   position: absolute;
@@ -1192,6 +1200,11 @@ footer p > a:last-child:after {
     -moz-transform: scale(.7);
     -ms-transform: scale(.7);
     -o-transform: scale(.7);
+  }
+  .diary-item>.sign>span,
+  .diary-item>.sign>a {
+    font-size: .3rem;
+    margin-right: .1rem;
   }
 }
 

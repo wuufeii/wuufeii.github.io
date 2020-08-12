@@ -81,7 +81,7 @@ function getLogList(item, content) {
   item.sign.forEach(inner => {
     domStr += `<a href="./blog.html?type=${inner}" class="iconfont icon-biaoqian tag">${inner}</a>`
   })
-  domStr += `</div><pre class="content showDiary">${content}</pre><a class="btn" href="./blog.html?detail=${item.itemId}">阅读更多</a></div>`
+  domStr += `</div><pre class="content">${content}</pre><a class="btn" href="./blog.html?detail=${item.itemId}">阅读更多</a></div>`
   newDom.innerHTML = domStr
   return newDom
 }
@@ -93,7 +93,7 @@ function getLogDetail(item, content, dom) {
   item.sign.forEach(inner => {
     domStr += `<a href="./blog.html?type=${inner}" class="iconfont icon-biaoqian tag">${inner}</a>`
   })
-  domStr += `</div><pre class="content showDiary">${content}</pre>`
+  domStr += `</div><pre class="content">${content}</pre>`
   let currentBlog = [...allBlog]
     domStr+= '</div>'
     newDom.innerHTML = domStr
