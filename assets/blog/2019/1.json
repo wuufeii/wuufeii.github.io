@@ -10,7 +10,119 @@ blog2019(
     "time": "2019-02-16",
     "title": "var、let和const的区别",
     "sign": ["JavaScript","es6"],
-    "content": "    我记得在我读大三的时候，去参加某公司的实习生面试的时候，做的面试题的第一道就是这个问题。当然起初也对这个问题有一定的了解，但是了解的程度也只是皮毛，只知道这三个都可以用来声明变量，其中const用来声明常量，其值不可以更改。let和const是es6中的，了解的程度大概就这样。等面试下来，我查阅资料，学到了一些\"不为人知\"知识，接下来听我娓娓道来：\n    1.let和const允许把变量的作用域限制在块级域中；var申明变量要么是全局的，挂载在window上，要么是函数级的，限制在函数作用域内，而无法是块级的。<code class=\"language-javascript\">  function fn(){\n    var user = 'wuufeii';\n    console.log(user); //正确，输出wuufeii\n}  fn();  console.log(user);//报错,user is not defined。</code>    2.var声明变量存在变量提升，let和const不存在变量提升\n<code class=\"language-javascript\">  console.log(user);//不报错,返回undefined；因为var会变量提示，相当于在之前会var user;但是没有赋值，所以默认值为undefined。\n  var user = 'wuufeii';  \n</code> 如果是以下就会报错了<code class=\"language-javascript\">  console.log(user);//报错,Unexpected identifier 因为let和const不存在变量提升 \nlet user = 'wuufeii';</code>    所以用let和const定义的变量一定要在声明后再使用，否则会报错。\n    3.let和const声明形成块作用域:\n    var只有全局作用域和函数作用域概念，没有块级作用域的概念。但是会把{}内也假称为块作用域。\n    let、const：只有块级作用域的概念，由{}包括起来，if语句和for语句里面的{}也属于块级作用域。\n    块级作用域可以嵌套。\n    内部的作用域可以访问到外层作用域"
+    "content": "    我记得在我读大三的时候，去参加某公司的实习生面试的时候，做的面试题的第一道就是这个问题。当然起初也对这个问题有一定的了解，但是了解的程度也只是皮毛，只知道这三个都可以用来声明变量，其中const用来声明常量，其值不可以更改。let和const是es6中的，了解的程度大概就这样。等面试下来，我查阅资料，学到了一些\"不为人知\"知识，接下来听我娓娓道来：\n    1.let和const允许把变量的作用域限制在块级域中；var申明变量要么是全局的，挂载在window上，要么是函数级的，限制在函数作用域内，而无法是块级的。<code class=\"language-javascript\">  function fn(){\n    var user = 'wuufeii';\n    console.log(user); //正确，输出wuufeii\n}  fn();  console.log(user);//报错,user is not defined。</code>    2.var声明变量存在变量提升，let和const不存在变量提升\n<code class=\"language-javascript\">  console.log(user);//不报错,返回undefined；因为var会变量提示，相当于在之前会var user;但是没有赋值，所以默认值为undefined。\n  var user = 'wuufeii';  \n</code> 如果是以下就会报错了<code class=\"language-javascript\">  console.log(user);//报错,Unexpected identifier 因为let和const不存在变量提升 \nlet user = 'wuufeii';</code>    所以用let和const定义的变量一定要在声明后再使用，否则会报错。\n    3.let和const声明形成块作用域:\n    var只有全局作用域和函数作用域概念，没有块级作用域的概念。但是会把{}内也假称为块作用域。\n    let、const：只有块级作用域的概念，由{}包括起来，if语句和for语句里面的{}也属于块级作用域。\n    块级作用域可以嵌套。\n    内部的作用域可以访问到外层作用域。\n   4. 同一作用域下let和const不能声明同名变量，而var可以
+  <code class=\"language-javascript\">
+   for (var i = 0; i < 3; i++) {
+      console.log(i); // 0 1 2
+   }
+   console.log(i); // 3 
+   /*var声明了变量之后，就一直存在，for循环结束后，他还在。*/
+   var i;
+   console.log(i); //依然还是3
+   for (var i = 0; i < 3; i++) { 
+       /*可以继续声明i，并重新赋值*/
+       console.log(i); // 0 1 2
+   }</code>
+<code class=\"language-javascript\">
+   let son = '这是son';
+   let son; // error 变量已经声明过了
+</code>
+   但是在不同作用域下可以继续声明，如下：
+<code class=\"language-javascript\">
+    let getUser = function(){
+       let user='wuufeii';
+       if(true){
+           let user='fly';
+           console.log(user);//fly
+       }
+       console.log(user);//wuufeii
+   }
+   letClass(); 
+</code>
+   当先let声明后再var声明
+<code class=\"language-javascript\">
+   let getUser = function(){
+      let name='wuufeii';
+      if(true){
+         var name='fly';   // error
+         console.log(name);
+      }
+      console.log(name);
+   }
+   getUser();
+   // var 是函数级作用域，相当于这个函数作用域中有let和var声明的两个name的变量了
+   // var 作用于整个getUser，不仅仅是if(if只是个块级作用域，无法限制var) ，和let冲突了，let不能重复声明，already been declared=已经被声明
+</code>
+   先var声明再let声明
+   可以正常运行，块级作用域内let覆盖了var定义的变量
+<code class=\"language-javascript\">
+   let getUser = function(){
+      var name='wuufeii';
+      if(true){
+         let name='fly';
+         console.log(name);
+      }
+      console.log(name);
+   }
+   getUser();
+</code>
+   5. const和let区别
+   const一旦声明必须赋值, 必须赋值，必须赋值！不能使用null占位；声明后不能再修改；如果声明的是复合类型数据，可以修改其属性。具体参照后文中const的补充部分。
+
+   6.暂存死区：ES6明确规定，如果区块中存在let命令，这个区块对这些命令声明的变量，从一开始就形成了封闭作用域。凡是在声明之前就使用这些变量，就会报错。所以在代码块内，使用let命令声明变量之前，该变量都是不可用的。这在语法上，称为“暂时性死区”（temporal dead zone，简称 TDZ）。
+<code class=\"language-javascript\">
+   var name = 'wuufeii';
+   {
+      console.log(name); //wuufeii，块级作用域对于var没效果，会自动查找上面的变量
+      var name = 'fly';
+   }
+   console.log(name); //wuufeii，块级作用域中修改了变量，生效了
+</code>
+<code class=\"language-javascript\">
+   let name = 'wuufeii';
+   {
+      console.log(wuufeii);//error，let直接封闭作用域，这里的变量，不能向上找了向下又找不到
+      let name = 'wuufeii';
+   }
+   console.log(name);
+</code>
+<code class=\"language-javascript\">
+   let name = 'wuufeii';
+   {
+       let monkey = 'fly';
+       console.log(monkey);   // fly，这个let只在当前作用域内生效
+   }
+    console.log(monkey); // wuufeii
+</code>
+
+<code class=\"language-javascript\">
+   let name = 'wuufeii';
+   if(true) {
+      console.log(name);//Uncaught ReferenceError: name is not defined
+      let a = "fly";
+   }
+// 当前作用域顶部到该变量声明位置中间的部分，都是该let变量的死区，在死区中，禁止访问该变量。由此，我们给出结论，let声明的变量存在变量提升，但是由于死区我们无法在声明前访问这个变量。
+// 只要块级作用域内存在let命令，它所声明的变量就“绑定”（binding）这个区域，不再受外部的影响。在代码块中，使用let命令声明变量之前，该变量都是不可用的，这在语法上称为“暂时性死亡”。
+</code>
+
+   7.常量const的补充
+除了let以外，ES6还引入了cons，const 和 let 的作用域是一致的，不同的是 const 变量一旦被赋值，就不能再改变了，但是这并不意味着使用 const 声明的变量本身不可变，只是说它不可被再次赋值了，而且const 声明的变量必须经过初始化。
+<code class=\"language-javascript\">
+   const a = 1; // 常量在声明的时候必须被初始化
+   a = 2; // error  常量不能被修改
+</code>
+   但是，以下两种情况是可以的
+<code class=\"language-javascript\">
+   const user = {   
+      // 这是一个引用类型的常量  里面的内容可以修改
+      age: 22,
+      name: 'wuufeii',
+   }; 
+   xiaoming.age = 25; // 正确，const只会保证这个引用常量的地址不发生改变，修改里面的值不会改变地址。
+   user = {}; // 报错
+   const arr = [];
+   arr.push(1);   //可以改变数组中的元素
+</code>"
   },
   {
     "time": "2019-02-15",
