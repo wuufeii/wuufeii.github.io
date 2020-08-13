@@ -870,6 +870,11 @@ footer p > a:last-child:after {
 .diary-list>.text>a {
   color: #666;
   font-size: .3rem;
+  display: inline-block;
+  width: calc(100% - 2.4rem);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .diary-list>.text>a:hover {
   cursor: pointer;
