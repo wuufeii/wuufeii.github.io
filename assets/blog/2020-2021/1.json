@@ -1,0 +1,9 @@
+blog2(
+[
+  {
+    "time": "2019-03-02",
+    "title": "er(一)",
+    "sign": ["CSS","HTML"],
+    "content": "<template>\n    <pre>\n        <code>\n            <xxx-comp></xxx-comp>\n            <div>test</div>\n        </code>\n    </pre>\n</template>\n"
+  }
+])

@@ -1,4 +1,4 @@
-// import diary2018 from '../blog/2018/1.json'
+// import diary2018 from '../blog/2018-2020-2021/1.json'
 /*日志展示*/
 let indexNum = 0 //首页展示的文章条数
 let allBlog = [] //所有日志
@@ -6,13 +6,10 @@ let allSign = [] //所有标签
 let allSignStr = '' //所有标签（字符串）
 let timer = null
 
-const blog2020 = function (data) {
+const blog2 = function (data) {
   showDiary(data)
 }
-const blog2019 = function (data) {
-  showDiary(data)
-}
-const blog2018 = function (data) {
+const blog1 = function (data) {
   showDiary(data)
 }
 

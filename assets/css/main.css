@@ -755,6 +755,7 @@ footer p > a:last-child:after {
 .diary {
   padding-top: .4rem;
   padding-bottom: .4rem;
+  font-family: Consolas,Monaco,'Andale Mono',monospace;
 }
 .diary-item {
   border-bottom: .06rem dashed #9ce8ec;
@@ -835,6 +836,14 @@ footer p > a:last-child:after {
   line-height: 1.8;
   background-color: #e6e6e6;
   margin: .16rem 0;
+}
+.diary-detail-item .content .full-img{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.diary-detail-item .content a{
+  text-decoration: underline;
 }
 .next-blog {
   display: flex;
@@ -1273,6 +1282,9 @@ footer p > a:last-child:after {
   .diary-list>div:not(:last-child):before {
     width: .04rem;
     left: -.02rem;
+  }
+  .diary-item>.content {
+    font-size: 0.32rem;
   }
 }
 
