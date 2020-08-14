@@ -847,9 +847,6 @@ footer p > a:last-child:after {
   width: 100%;
   height: 100%;
 }
-.diary-detail-item .content a{
-  text-decoration: underline;
-}
 .next-blog {
   display: flex;
   justify-content: space-between;
