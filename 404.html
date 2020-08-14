@@ -1,31 +1,128 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-  <title>出错啦</title>
-  <link rel="shortcut icon" href="https://wuufeii.github.io/favicon.ico">
-  <link rel="stylesheet" href="https://wuufeii.github.io/assets/css/reset.css">
-  <link rel="stylesheet" href="https://wuufeii.github.io/assets/css/fonts/iconfont.css">
-  <link rel="stylesheet" href="https://wuufeii.github.io/assets/css/main.css">
-  <style>
-    html {
-      height: 100%;
+&lt;!DOCTYPE html>
+&lt;html lang="zh-CN">
+&lt;head>
+  &lt;meta charset="UTF-8">
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  &lt;title>出错啦&lt;/title>
+  &lt;link rel="shortcut icon" href="https://wuufeii.github.io/favicon.ico">
+
+  &lt;style>
+
+.time-line{
+  display:flex;
+  align-items:center;
+  position:relative;
+}
+.circle{
+  width:24px;
+  display:inline-block;
+  height:24px;
+  position: relative;
+  background: #ccc;
+  border-radius: 50%;
+  margin: 20px;
+}
+.circle:before{
+  content:'';
+  width:2px;
+  position:absolute;
+  background-color:#38a4ab;
+  left: 11px;
+  top: 2px;
+  bottom: -40px;
+}
+.time-line:last-child .circle:before {
+  display: none;
+}
+.pie_left, .pie_right{
+  width:24px;
+  height:24px;
+  position: absolute;
+  top:0;
+  left:0;
+}
+.left, .right{
+  position: absolute;
+  left:0;
+  top:0;
+  border-radius:50%;
+  background: #38a4ab;
+  width:100%;
+  height:100%;
+  transform: rotate(-180deg);
+}
+.pie_left, .left{
+  clip: rect(auto, 12px, auto, auto);
+}
+.pie_right, .right{
+  clip:rect(0, auto, auto, 12px);
+}
+.mask{
+  position: absolute;
+  top:-8px;
+  left:-8px;
+  width:40px;
+  height:40px;
+  line-height: 40px;
+  font-size:16px;
+  border-radius: 50%;
+  background: #fff;
+  text-align: center;
+  transform: scale(.5);
+}
+  &lt;/style>
+&lt;/head>
+&lt;body>
+&lt;div>
+  &lt;div class="time-line">
+    &lt;div class="circle">
+      &lt;div class="pie_left">&lt;div class="left">&lt;/div>&lt;/div>
+      &lt;div class="pie_right">&lt;div class="right">&lt;/div>&lt;/div>
+      &lt;div class="mask">&lt;span class="progress">0&lt;/span>%&lt;/div>
+    &lt;/div>
+    &lt;span>今天我开始接手这个项目&lt;/span>
+  &lt;/div>
+  &lt;div class="time-line">
+    &lt;div class="circle">
+      &lt;div class="pie_left">&lt;div class="left">&lt;/div>&lt;/div>
+      &lt;div class="pie_right">&lt;div class="right">&lt;/div>&lt;/div>
+      &lt;div class="mask">&lt;span class="progress">30&lt;/span>%&lt;/div>
+    &lt;/div>
+    &lt;span>完成项目一部分&lt;/span>
+  &lt;/div>
+  &lt;div class="time-line">
+    &lt;div class="circle">
+      &lt;div class="pie_left">&lt;div class="left">&lt;/div>&lt;/div>
+      &lt;div class="pie_right">&lt;div class="right">&lt;/div>&lt;/div>
+      &lt;div class="mask">&lt;span class="progress">70&lt;/span>%&lt;/div>
+    &lt;/div>
+    &lt;span>基本完成这个项目，还需测试&lt;/span>
+  &lt;/div>
+  &lt;div class="time-line">
+    &lt;div class="circle">
+      &lt;div class="pie_left">&lt;div class="left">&lt;/div>&lt;/div>
+      &lt;div class="pie_right">&lt;div class="right">&lt;/div>&lt;/div>
+      &lt;div class="mask">&lt;span class="progress">100&lt;/span>%&lt;/div>
+    &lt;/div>
+    &lt;span>完成，庆祝！&lt;/span>
+  &lt;/div>
+&lt;/div>
+&lt;/body>
+&lt;script>
+  function getProgress() {
+    let dom = document.getElementsByClassName('progress')
+    for( let i = 0; i&lt;dom.length; i++){
+      let num = dom[i].innerHTML * 3.6;
+      let rightDom = dom[i].parentNode.parentNode.querySelector('div:nth-child(2)').getElementsByClassName('right')[0]
+      let leftDom = dom[i].parentNode.parentNode.querySelector('div:nth-child(1)').getElementsByClassName('left')[0]
+      if(num &lt;= 180){
+        rightDom.style.transform = "rotate("+(num-180)+"deg)"
+      }else{
+        rightDom.style.transform = "rotate(0deg)"
+        leftDom.style.transform = "rotate("+(num-360)+"deg)"
+      }
     }
-    body {
-      background-color: #B396FF;
-      color: #fff;
-      height: 100%;
-    }
-  </style>
-</head>
-<body>
-  <div class="error-box">
-    <h1>404</h1>
-    <p><i class="iconfont icon-biaoqing-nanguo"></i>糟糕，您访问的页面走丢了</p>
-    <p><i class="iconfont icon-biaoqing-dai"></i>别着急，坐下喝杯茶休息一会再试试</p>
-    <p><i class="iconfont icon-biaoqing-weixiao"></i>不用担心，您还可以返回首页重新试试</p>
-    <a href="https://wuufeii.github.io">返回首页</a>
-  </div>
-</body>
-</html>
+  }
+  getProgress()
+&lt;/script>
+&lt;/html>
