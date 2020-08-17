@@ -873,6 +873,8 @@ footer p > a:last-child:after {
   color: #666;
   font-size: .3rem;
   display: inline-block;
+  vertical-align: middle;
+  padding-top: .02rem;
   width: calc(100% - 2.4rem);
   overflow: hidden;
   white-space: nowrap;
