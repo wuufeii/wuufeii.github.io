@@ -1,6 +1,12 @@
 blog1(
 [
   {
+    "time": "2019-07-27",
+    "title": "微信小程序上线调用IP+端口接口",
+    "sign": ["小程序"],
+    "content": "    微信小程序的严格限制，上线时调用的接口域名需要备案、域名需要上https、还需要开发者在后台设置request白名单等，这一系列的操作着实让人头疼，有没有什么办法可以在上线的时候仍然可以访问ip+端口这样的接口呢？答案当然是有的，由于小程序的云开发功能，让我们可以突破这个限制。当然这个需要开通小程序云开发平台，调用一下云函数，这样就可以不受限制得访问接口了。具体实现方法请移步至<a href=\"https://github.com/guren-cloud/v-request\" target=\"_blank\">https://github.com/guren-cloud/v-request</a>。\n    本人测试过在uni-app生成微信小程序时同样可以使用。"
+  },
+  {
     "time": "2019-05-11",
     "title": "node.js+vue实现对数据的增删改查",
     "sign": ["node.js","vue"],

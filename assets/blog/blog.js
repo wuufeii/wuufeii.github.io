@@ -6,6 +6,9 @@ let allSign = [] //所有标签
 let allSignStr = '' //所有标签（字符串）
 let timer = null
 
+const blog = function (data) {
+  showDiary(data)
+}
 const blog2 = function (data) {
   showDiary(data)
 }
@@ -39,7 +42,6 @@ function showDiary(data) {
       if (itemId === item.itemId) {
         getLogDetail(item, content, dom)
       }
-
     }
     if (isHome) {
       /*首页显示的内容*/
@@ -190,7 +192,6 @@ function getLogByTime(url, dom) {
 
 /*标签页*/
 function getSignPage(dom) {
-  console.log('jll??????')
   let newDom = document.createElement('div')
   let domStr = `<div class="diary-sign"><div class="title">标签 - ${allSign.length}</div><div class="sign-item">`
   allSign.forEach(item => {
