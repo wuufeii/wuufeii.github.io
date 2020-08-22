@@ -3,7 +3,7 @@ blog(
   {
     "time": "2020-08-19",
     "title": "node.js+vue+mysql 实现增删改查",
-    "sign": ["小程序"],
+    "sign": ["node.js","vue","mysql"],
     "content": "    博主正在码字中..."
   }
 ])
