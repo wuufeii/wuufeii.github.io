@@ -54,3 +54,12 @@ function  showImage() {
 
 }
 showImage()
+
+/*日期*/
+function getDate() {
+  let date = new Date()
+  let year = date.getFullYear()
+  let dom = document.getElementsByClassName('copyright')[0]
+  dom.innerHTML = `&copy; 2018-${year} WuuFeii 邬飞`
+}
+getDate()
