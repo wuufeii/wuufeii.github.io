@@ -422,7 +422,7 @@ footer {
   text-align: center;
 }
 
-footer p:first-child {
+footer p:not(:last-child) {
   margin-bottom: .2rem;
 }
 
@@ -441,6 +441,15 @@ footer p > a:after {
 
 footer p > a:last-child:after {
   display: none;
+}
+.statistics {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.statistics>img {
+  width: 3rem;
+  height: .5rem;
 }
 
 /* 简历页面样式 */
